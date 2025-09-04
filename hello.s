@@ -1,5 +1,7 @@
 /*
 Hello World Program for arm64 assembly on macOS
+
+Learning assembly for my compiler
  */
 
 
