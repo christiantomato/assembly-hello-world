@@ -1,0 +1,22 @@
+Arm Architecture:
+
+- 64 bit registers, 31 total registers. 
+- x0-x30 accessess the 64 bit registers
+- w0-w30 used to access only 32 bits of the larger 64 bit registers
+
+Assembly Instructions:
+
+- <operator> <destination>, <source>
+- <operator> <destination>, <immediate>
+- <operator> <destiantion>, [address]
+
+ex. mov x0, #4
+(moves the 'immediate' 4, into the first 64 bit register)
+
+System Call:
+
+To do anything, we need to request a service from the kernel, which we can do with system calls
+
+- svc 0 is the command for the system calls
+- upon this action, the kernel stores the system call number in register x16
+- registers x0-x4 determine how to do it and serve as arguements for the system call
