@@ -4,6 +4,8 @@ Hello World Program for arm64 assembly on macOS
 
 
 
+//specify the section where machine instructions are going
+.text
 //specify the starting function (main)
 .global _main
 //makes sure things land on a 4 byte boundary (not too understanding of technical details but keep it)
