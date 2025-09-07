@@ -1,5 +1,8 @@
 /*
-Hello World Program for arm64 assembly on macOS
+Hello World Program for ARM64 Assembly on macOS
+
+program enters at main, and then executes 2 functions: print and exit
+we use 2 syscalls which are #4 which is write, and #1 which is exit
 
 learning assembly for my compiler
  */
