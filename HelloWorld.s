@@ -14,7 +14,7 @@ learning assembly for my compiler
 //specify the starting function (main)
 .global _main
 //makes sure things land on a 4 byte boundary (not too understanding of technical details but keep it)
-.align 2
+.align 4
 
 //the entry point for the program
 _main: 
@@ -32,7 +32,7 @@ _print:
     //length of string
     mov x2, #12
     //invoke kernel
-    svc 0
+    svc #0x80
 
 //function for exiting the program with exit code 0
 _exit:
@@ -41,7 +41,7 @@ _exit:
     //x0 register takes argument for exit number (0 for success)
     mov x0, #0
     //invoke kernel
-    svc 0
+    svc #0x80
 
 //store the hello world message in ram (12 characters)
 message: 
